@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>jQuery Password Strength Checker Plugin</title>
+		
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<meta name="author" content="Steffen Hollstein" />
+		<meta name="copyright" content="Steffen Hollstein" />
+		
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.passwordstrengthchecker.css" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.passwordstrengthchecker-1.0.0.js"></script>
+		
+	</head>
+	<body>
+		
+		
+		<div style="width:80%; max-width:600px; margin:0 auto;">
+			
+			<h2>
+				Examples
+			</h2>
+			<script type="text/javascript">
+				jQuery(function(){
+					
+					// default, right
+					jQuery(
+						".mycustomclass-default"
+					).passwordstrengthchecker();
+					
+					// left
+					jQuery(
+						".mycustomclass-left"
+					).passwordstrengthchecker({
+						position : 'left'
+					});
+					
+					// top
+					jQuery(
+						".mycustomclass-top"
+					).passwordstrengthchecker({
+						position : 'top'
+					});
+					
+					// bottom
+					jQuery(
+						".mycustomclass-bottom"
+					).passwordstrengthchecker({
+						position : 'bottom'
+					});
+					
+				});
+			</script>
+			<form action="" autocomplete="off">
+				
+				<div>
+					<h3>
+						Default, right
+					</h3>
+					<input 
+						type="password" 
+						name="password_right" 
+						class="mycustomclass-default"
+					/><br/><br/>
+				</div>
+				
+				<div>
+					<h3>
+						Left
+					</h3>
+					<input 
+						type="password" 
+						name="password_left" 
+						class="mycustomclass-left"
+					/><br/><br/>
+				</div>
+				
+				<div>
+					<h3>
+						Top
+					</h3>
+					<input 
+						type="password" 
+						name="password_top" 
+						class="mycustomclass-top"
+					/><br/><br/>
+				</div>
+				
+				<div>
+					<h3>
+						Bottom
+					</h3>
+					<input 
+						type="password" 
+						name="password_bottom" 
+						class="mycustomclass-bottom"
+					/><br/><br/>
+				</div>
+				
+			</form>
+			
+			
+			<h2>
+				Example, localized "German":
+			</h2>
+			<script type="text/javascript">
+				jQuery(function(){
+					
+					var germanStrings = {
+						headline : 'Passwortsicherheit:',
+						quality : {
+							too_short : 'zu kurz',
+							weak : 'Schwach',
+							good : 'Gut',
+							strong : 'Stark'
+						},
+						help : 'Verwenden Sie mindestens 8 Zeichen! Das Passwort sollte aus Buchstaben, Zahlen und Sonderzeichen bestehen. Ihr Passwort sollte keine Reihen z.B. &quot;1234&quot; oder &quot;abcd&quot; enthalten.' 
+					};
+					
+					jQuery(
+						".mycustomclass-localized"
+					).passwordstrengthchecker({
+						localizedStrings : germanStrings
+					});
+					
+				});
+			</script>
+			<form action="" autocomplete="off">
+				
+				<input 
+					type="password" 
+					name="password_localized" 
+					class="mycustomclass-localized"
+				/>
+				
+			</form>
+			
+			
+		</div>
+		
+		
+		<ul>
+			<li>
+				<a href="http://code.google.com/p/jquery-passwordstrengthchecker/" title="Project page - code.google.com">
+					Project page - code.google.com
+				</a>
+			</li>
+			<li>
+				<a href="http://opensource.steffenhollstein.de/templates/passwordstrengthchecker/" title="More Examples">
+					More Examples
+				</a>
+			</li>
+		</ul>
+		
+		
+	</body>
+</html>
